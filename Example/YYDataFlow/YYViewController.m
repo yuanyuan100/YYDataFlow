@@ -7,6 +7,8 @@
 //
 
 #import "YYViewController.h"
+#import <YYDataFlow/NSObject+YYDataFlow.h>
+#import "Person.h"
 
 @interface YYViewController ()
 
@@ -18,6 +20,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    Person *person = [Person new];
+    person.name = @"pyy1";
+    [person yyObserveredKeyPath:@"name" changed:^(id  _Nonnull newData, id  _Nonnull oldData) {
+        
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        person.name = @"pyy2";
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,0 +1,22 @@
+{
+  "name": "YYDataFlow",
+  "version": "0.1.0",
+  "summary": "A short description of YYDataFlow.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Yvan/YYDataFlow",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Yvan": "yuanyuan_pyy@163.com"
+  },
+  "source": {
+    "git": "https://github.com/Yvan/YYDataFlow.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "YYDataFlow/Classes/**/*"
+}
