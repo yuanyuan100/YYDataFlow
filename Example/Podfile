@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YYDataFlow_Example' do
+  pod 'YYDataFlow', :path => '../'
+
+  target 'YYDataFlow_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
