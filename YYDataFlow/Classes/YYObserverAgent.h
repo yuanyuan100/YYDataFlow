@@ -7,9 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class YYObserveredAgent;
-
 @interface YYObserverAgent : NSObject
 @property (class, nonatomic, readonly) YYObserverAgent *manager;
-@property (nonatomic, strong, readonly) NSMutableSet<YYObserveredAgent *> *observeredAgentSet;
 @end

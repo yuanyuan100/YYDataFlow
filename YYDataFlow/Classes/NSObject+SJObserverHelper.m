@@ -10,7 +10,7 @@
 #import <objc/message.h>
 
 @interface NSObject ()
-- (void)yyRemoveYYObserveredAgentOfSet:(NSObject *)object;
+@property (nonatomic, strong, readonly) NSNumber *yyCount;
 @end
 
 @interface SJObserverHelper : NSObject
@@ -23,8 +23,9 @@
 @implementation SJObserverHelper
 - (void)dealloc {
     if ( _factor ) { // !< 判断防止重复移除;
-        [_observer yyRemoveYYObserveredAgentOfSet:_target];
-        [_target removeObserver:_observer forKeyPath:_keyPath];
+        if ([_target yyCount].integerValue > 0) {
+            [_target removeObserver:_observer forKeyPath:_keyPath];
+        }
     }
 }
 @end

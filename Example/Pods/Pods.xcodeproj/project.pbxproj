@@ -19,10 +19,8 @@
 		7579AA9F979AD7D245E389EA35BC1CEC /* NSObject+SJObserverHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B15EB8912E209D1F0DC883EFED77E101 /* NSObject+SJObserverHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83D1E0A6D3054BE14E80AE47370884A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		9757359E79A2DB76FFF843DBA1E818FB /* YYDataFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E392DF0AD4304F5EF12B2EE3DCC7FD77 /* YYDataFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A0AAFA4ECBE0D92125115746973AE844 /* YYObserveredAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9001DF7250006EA75AD80E06C1F68A98 /* YYObserveredAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1703E3CB458EC324FA31849CDD81531 /* NSObject+YYDataFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0263C02EE1D96D6F86867C699B361CBF /* NSObject+YYDataFlow.m */; };
 		C29CD4055EF85D9399DFD732B341EEEB /* Pods-YYDataFlow_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A74443FD5E9A20046687E477660F2830 /* Pods-YYDataFlow_Tests-dummy.m */; };
-		D24F025388A24E2C739CF5248B6940E8 /* YYObserveredAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E5F3B0DBADB1A2177F43D7E4441E34 /* YYObserveredAgent.m */; };
 		F9E62C52638D126B60F0655CD03FB220 /* Pods-YYDataFlow_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F113E2E6A90CA74CFD478B77ECA16405 /* Pods-YYDataFlow_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -39,23 +37,21 @@
 /* Begin PBXFileReference section */
 		004B8C8722A0B01AAEA9293E3B7138D0 /* Pods-YYDataFlow_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYDataFlow_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0263C02EE1D96D6F86867C699B361CBF /* NSObject+YYDataFlow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYDataFlow.m"; path = "YYDataFlow/Classes/NSObject+YYDataFlow.m"; sourceTree = "<group>"; };
-		03E5F3B0DBADB1A2177F43D7E4441E34 /* YYObserveredAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYObserveredAgent.m; path = YYDataFlow/Classes/YYObserveredAgent.m; sourceTree = "<group>"; };
 		04844CB32D6FF2D519E2C2C6B40A3AA6 /* NSObject+SJObserverHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SJObserverHelper.m"; path = "YYDataFlow/Classes/NSObject+SJObserverHelper.m"; sourceTree = "<group>"; };
 		07292A48870031C8C3FE67550E2CD71F /* YYDataFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYDataFlow-dummy.m"; sourceTree = "<group>"; };
-		1F343565DC96D55E7E271DCFDDC55093 /* Pods-YYDataFlow_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YYDataFlow_Example.modulemap"; sourceTree = "<group>"; };
-		22CF8FCCEA045008E510AA15AA5F51C7 /* YYDataFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = YYDataFlow.modulemap; sourceTree = "<group>"; };
+		1F343565DC96D55E7E271DCFDDC55093 /* Pods-YYDataFlow_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YYDataFlow_Example.modulemap"; sourceTree = "<group>"; };
+		22CF8FCCEA045008E510AA15AA5F51C7 /* YYDataFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YYDataFlow.modulemap; sourceTree = "<group>"; };
 		238A333F7F3DB81FE1DBCE3A892BB346 /* Pods-YYDataFlow_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YYDataFlow_Tests-umbrella.h"; sourceTree = "<group>"; };
 		472365EDD9A792EC139621A5BA907F45 /* YYObserverAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYObserverAgent.h; path = YYDataFlow/Classes/YYObserverAgent.h; sourceTree = "<group>"; };
-		4835B205A1DBB8803D7D0887030D6B7A /* YYDataFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYDataFlow.framework; path = YYDataFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4835B205A1DBB8803D7D0887030D6B7A /* YYDataFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYDataFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6F6636278F222BC880717B28CEC3E06A /* YYDataFlow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYDataFlow-prefix.pch"; sourceTree = "<group>"; };
 		85CBEAA40F5F1620973B184627DDE39F /* Pods-YYDataFlow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYDataFlow_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8A5D521CF30EAF801568A12E2C8CB9F9 /* Pods_YYDataFlow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YYDataFlow_Tests.framework; path = "Pods-YYDataFlow_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DE3A555283165F51E4AF9DC80CBF2E8 /* Pods_YYDataFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YYDataFlow_Example.framework; path = "Pods-YYDataFlow_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9001DF7250006EA75AD80E06C1F68A98 /* YYObserveredAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYObserveredAgent.h; path = YYDataFlow/Classes/YYObserveredAgent.h; sourceTree = "<group>"; };
+		8A5D521CF30EAF801568A12E2C8CB9F9 /* Pods_YYDataFlow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYDataFlow_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE3A555283165F51E4AF9DC80CBF2E8 /* Pods_YYDataFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYDataFlow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		903C863899B9340A5CF68263DB61A46D /* Pods-YYDataFlow_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YYDataFlow_Example-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94038A8DD77B816E5C563DBF3068C42C /* Pods-YYDataFlow_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YYDataFlow_Tests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94038A8DD77B816E5C563DBF3068C42C /* Pods-YYDataFlow_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YYDataFlow_Tests.modulemap"; sourceTree = "<group>"; };
 		9956BE97CE208E6A58293EF3D3A97D33 /* Pods-YYDataFlow_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YYDataFlow_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A74443FD5E9A20046687E477660F2830 /* Pods-YYDataFlow_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YYDataFlow_Tests-dummy.m"; sourceTree = "<group>"; };
 		A937C1E20849977F664B78FD8529DAC7 /* YYObserverAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYObserverAgent.m; path = YYDataFlow/Classes/YYObserverAgent.m; sourceTree = "<group>"; };
@@ -132,8 +128,6 @@
 				0263C02EE1D96D6F86867C699B361CBF /* NSObject+YYDataFlow.m */,
 				472365EDD9A792EC139621A5BA907F45 /* YYObserverAgent.h */,
 				A937C1E20849977F664B78FD8529DAC7 /* YYObserverAgent.m */,
-				9001DF7250006EA75AD80E06C1F68A98 /* YYObserveredAgent.h */,
-				03E5F3B0DBADB1A2177F43D7E4441E34 /* YYObserveredAgent.m */,
 				3BCD772B3A75FBE7B1CE925CA83E22DE /* Support Files */,
 			);
 			name = YYDataFlow;
@@ -254,7 +248,6 @@
 				429959534F0F6F1D4F36A83E8AF5DBD4 /* NSObject+YYDataFlow.h in Headers */,
 				9757359E79A2DB76FFF843DBA1E818FB /* YYDataFlow-umbrella.h in Headers */,
 				149551E1A46373E36D5FFEC213146CFB /* YYObserverAgent.h in Headers */,
-				A0AAFA4ECBE0D92125115746973AE844 /* YYObserveredAgent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +351,6 @@
 				A1703E3CB458EC324FA31849CDD81531 /* NSObject+YYDataFlow.m in Sources */,
 				29EF34949843F47D8C2F1F9277FB4878 /* YYDataFlow-dummy.m in Sources */,
 				0C2E97A4C73B92175996051CEB89D6DB /* YYObserverAgent.m in Sources */,
-				D24F025388A24E2C739CF5248B6940E8 /* YYObserveredAgent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
