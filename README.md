@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/YYDataFlow.svg?style=flat)](http://cocoapods.org/pods/YYDataFlow)
 [![Platform](https://img.shields.io/cocoapods/p/YYDataFlow.svg?style=flat)](http://cocoapods.org/pods/YYDataFlow)
 
-## introduce
+## Introduce
 
 正在开发的App为金融类型，后台频繁快速推送数据，UI界面需要及时响应。为了解决频繁reload UITableView等空间，解决办法是某个数据发生变化，仅刷新相应的独立UI元素（如，UILable，UIButton）。
 
