@@ -39,7 +39,7 @@ typedef void(^YYDataFlowChanged)(id newData, id oldData);
 @interface NSObject (YYPassiveObject)
 
 /**
- 数据驱动 当前对象的keyPath的值改变
+ 数据驱动当前对象的keyPath的值改变
  
  @warming 约定 keyPath 与 bindingKeyPath 属性类型相同
  @default 自动移除
@@ -50,7 +50,7 @@ typedef void(^YYDataFlowChanged)(id newData, id oldData);
 - (void)yyPassiveKeyPath:(NSString *)passvieKeyPath adjectiveObject:(NSObject *)adjectiveObject adjectiveKeyPath:(NSString *)adjectiveKeyPath;
 
 /**
- 数据驱动 当前对象的keyPath的值改变
+ 数据驱动当前对象的keyPath的值改变
  
  @default 自动移除
  @param passvieKeyPath 当前对象的属性路径
