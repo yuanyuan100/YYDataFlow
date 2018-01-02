@@ -10,10 +10,11 @@
 #endif
 #endif
 
-#import "NSObject+SJObserverHelper.h"
 #import "NSObject+YYDataFlow.h"
+#import "NSObject+YYPassiveObject.h"
 #import "YYObserverAgent.h"
-#import "YYObserveredAgent.h"
+#import "YYPassiveKeyPath.h"
+#import "YYSameKeyPath.h"
 
 FOUNDATION_EXPORT double YYDataFlowVersionNumber;
 FOUNDATION_EXPORT const unsigned char YYDataFlowVersionString[];

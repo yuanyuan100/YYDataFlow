@@ -2,15 +2,16 @@
 //  YYObserverAgent.m
 //  YYDataFlow
 //
-//  Created by GWWL on 2017/12/29.
+//  Created by GitHub:yuanyuan100 on 2017/12/29.
 //
 
 #import "YYObserverAgent.h"
+#import "YYSameKeyPath.h"
+
 #import "NSObject+YYDataFlow.h"
 
 @interface NSObject ()
-/* 存放回调 */
-@property (nonatomic, strong, readonly) NSMutableArray *yyCallBlockArray;
+@property (nonatomic, strong, readonly) NSMutableSet<YYSameKeyPath *> *yyKeyPathSet;
 @end
 
 static YYObserverAgent *__manager;
@@ -28,8 +29,14 @@ static YYObserverAgent *__manager;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    for (YYDataFlowChanged b in [object yyCallBlockArray]) {
-        b(change[@"new"], change[@"old"]);
+    
+    for (YYSameKeyPath *same in [object yyKeyPathSet]) {
+        if ([same.keyPath isEqualToString:keyPath]) {
+            for (YYDataFlowChanged b in same.callBlockArray) {
+                b(change[@"new"], change[@"old"]);
+            }
+        }
     }
+    
 }
 @end

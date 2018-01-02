@@ -2,54 +2,79 @@
 //  NSObject+YYDataFlow.m
 //  YYDataFlow
 //
-//  Created by GWWL on 2017/12/29.
+//  Created by GitHub:yuanyuan100 on 2017/12/29.
 //
 
 #import "NSObject+YYDataFlow.h"
+
 #import "YYObserverAgent.h"
-#import "NSObject+SJObserverHelper.h"
+#import "YYSameKeyPath.h"
 
 #import <objc/runtime.h>
 
-static void *kYYDataFlowYYCount = &kYYDataFlowYYCount;
-static void *kYYDataFlowyyCallBlockArray = &kYYDataFlowyyCallBlockArray;
+static void *kYYDataFlowyyKeyPathSet = &kYYDataFlowyyKeyPathSet;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject ()
-/* 计数 */
-@property (nonatomic, strong) NSNumber *yyCount;
-/* 存放回调 */
-@property (nonatomic, strong) NSMutableArray *yyCallBlockArray;
+/* 存放不同keypath */
+@property (nonatomic, strong) NSMutableSet<YYSameKeyPath *> *yyKeyPathSet;
 @end
 
 @implementation NSObject (YYDataFlow)
 
+
+#pragma mark - 核心方法
 - (void)yyObserveredKeyPath:(NSString *)keyPath changed:(nonnull YYDataFlowChanged)changed {
+   // 此处处理不同的keyPath
+    for (YYSameKeyPath *same in self.yyKeyPathSet) {
+        if ([same.keyPath isEqualToString:keyPath]) {
+            [self yyObserveredSameKeyPathOobject:same changed:changed];
+            return;
+        }
+    }
+    
+    // 新增
+    YYSameKeyPath *skp = [YYSameKeyPath new];
+    skp.keyPath = keyPath;
+    skp.master = self;
+    [self.yyKeyPathSet addObject:skp];
+    [self yyObserveredSameKeyPathOobject:skp changed:changed];
+}
+
+// 分发给相同的 KeyPath 处理
+- (void)yyObserveredSameKeyPathOobject:(YYSameKeyPath *)object changed:(nonnull YYDataFlowChanged)changed {
     // if 已经在观察列表中，则不需要重复观察，仅多一个回调即可
     // 但是需要记录 观察个数，在主动移除中，当同一个对象的观察个数为0则移除观察。
-    
-    [self.yyCallBlockArray addObject:changed];
-    if (self.yyCount.integerValue > 0) {
+    [object.callBlockArray addObject:changed];
+    if (object.count > 0) {
         // 不需要继续添加观察
-        self.yyCount = @(self.yyCount.integerValue + 1);
+        object.count++;
     } else {
-        self.yyCount = @(1);
-        [self sj_addObserver:YYObserverAgent.manager forKeyPath:keyPath];
+        object.count = 1;
+        [self addObserver:YYObserverAgent.manager forKeyPath:object.keyPath options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
     }
 }
 
 - (void)yyRemoveObserveredKeyPath:(NSString *)keyPath changed:(nonnull YYDataFlowChanged)changed {
-    if (self.yyCount.integerValue > 0) {
-        self.yyCount = @(self.yyCount.integerValue - 1);
-        [self.yyCallBlockArray removeObject:changed];
-        if (self.yyCount.integerValue == 0) {
+    for (YYSameKeyPath *same in self.yyKeyPathSet) {
+        if ([same.keyPath isEqualToString:keyPath]) {
+            [self yyRemoveObserveredSameKeyPathObject:same changed:changed];
+        }
+    }
+}
+
+- (void)yyRemoveObserveredSameKeyPathObject:(YYSameKeyPath *)object changed:(nonnull YYDataFlowChanged)changed {
+    if (object.count > 0) {
+        object.count--;
+        [object.callBlockArray removeObject:changed];
+        if (object.count == 0) {
             // 需要移除
-            [self yyRemoveOperationObserveredKeyPath:keyPath];
+            [self yyRemoveOperationObserveredKeyPath:object.keyPath];
         }
     } else {
         // 需要移除
-        [self yyRemoveOperationObserveredKeyPath:keyPath];
+        [self yyRemoveOperationObserveredKeyPath:object.keyPath];
     }
 }
 
@@ -57,32 +82,32 @@ NS_ASSUME_NONNULL_BEGIN
     [self removeObserver:YYObserverAgent.manager forKeyPath:keyPath];
 }
 
+#pragma mark - 扩展方法
+- (void)yyObserveredKeyPath:(NSString *)keyPath
+              bindingObject:(NSObject *)bindingObject
+             bindingKeyPath:(NSString *)bindingKeyPath {
+    
+    
+    
+    __weak typeof(bindingObject) weakBindingObject = bindingObject;
+    [self yyObserveredKeyPath:keyPath changed:^(id  _Nonnull newData, id  _Nonnull oldData) {
+        [weakBindingObject setValue:newData forKey:bindingKeyPath];
+    }];
+}
+
 #pragma mark - getter or setter
-- (NSNumber *)yyCount {
-    id count = objc_getAssociatedObject(self, kYYDataFlowYYCount);
-    if (count == nil) {
-        return @(0);
+- (NSMutableSet<YYSameKeyPath *> *)yyKeyPathSet {
+    id set = objc_getAssociatedObject(self, kYYDataFlowyyKeyPathSet);
+    if (set == nil) {
+        set = [[NSMutableSet alloc] init];
+        self.yyKeyPathSet = set;
     }
-    return count;
+    return set;
 }
 
-- (void)setYyCount:(NSNumber *)yyCount {
-    objc_setAssociatedObject(self, kYYDataFlowYYCount, yyCount, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setYyKeyPathSet:(NSMutableSet<YYSameKeyPath *> *)yyKeyPathSet {
+    objc_setAssociatedObject(self, kYYDataFlowyyKeyPathSet, yyKeyPathSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-
-- (NSMutableArray *)yyCallBlockArray {
-    id mutableArray = objc_getAssociatedObject(self, kYYDataFlowyyCallBlockArray);
-    if (mutableArray == nil) {
-        mutableArray = [[NSMutableArray alloc] init];
-        self.yyCallBlockArray = mutableArray;
-    }
-    return mutableArray;
-}
-
-- (void)setYyCallBlockArray:(NSMutableArray *)yyCallBlockArray {
-    objc_setAssociatedObject(self, kYYDataFlowyyCallBlockArray, yyCallBlockArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 @end
 
 NS_ASSUME_NONNULL_END

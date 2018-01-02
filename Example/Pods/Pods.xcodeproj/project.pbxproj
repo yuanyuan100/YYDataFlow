@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		09C7A3B9EBA24904384AE64099935798 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		0C2E97A4C73B92175996051CEB89D6DB /* YYObserverAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A937C1E20849977F664B78FD8529DAC7 /* YYObserverAgent.m */; };
 		147E7DF33AD2891CA31A4D02E42F4F6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		149551E1A46373E36D5FFEC213146CFB /* YYObserverAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 472365EDD9A792EC139621A5BA907F45 /* YYObserverAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		291D94CBCD2100ED47B728328A51801A /* NSObject+SJObserverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04844CB32D6FF2D519E2C2C6B40A3AA6 /* NSObject+SJObserverHelper.m */; };
-		29EF34949843F47D8C2F1F9277FB4878 /* YYDataFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07292A48870031C8C3FE67550E2CD71F /* YYDataFlow-dummy.m */; };
 		36D4131AB879CB3422798C10F29A63C3 /* Pods-YYDataFlow_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 903C863899B9340A5CF68263DB61A46D /* Pods-YYDataFlow_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		429959534F0F6F1D4F36A83E8AF5DBD4 /* NSObject+YYDataFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = E16B0BAF7DBA2851A18E9FF729F4D520 /* NSObject+YYDataFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AD9D494F58A383A44214222F7E0E5F9 /* Pods-YYDataFlow_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 238A333F7F3DB81FE1DBCE3A892BB346 /* Pods-YYDataFlow_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7579AA9F979AD7D245E389EA35BC1CEC /* NSObject+SJObserverHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B15EB8912E209D1F0DC883EFED77E101 /* NSObject+SJObserverHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58D4AC9BE5FB5B50CCCD6E303BEACCB4 /* NSObject+YYPassiveObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E9705648165C004232A43D7FD8D7581D /* NSObject+YYPassiveObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		724724628851EDC241FABBA8856B4DD7 /* YYSameKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAD2080A9E4ACA2AE185957DE8E9F1 /* YYSameKeyPath.m */; };
 		83D1E0A6D3054BE14E80AE47370884A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9757359E79A2DB76FFF843DBA1E818FB /* YYDataFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E392DF0AD4304F5EF12B2EE3DCC7FD77 /* YYDataFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1703E3CB458EC324FA31849CDD81531 /* NSObject+YYDataFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0263C02EE1D96D6F86867C699B361CBF /* NSObject+YYDataFlow.m */; };
+		92B80C3CC31B5A6A033E26395292F5BD /* YYPassiveKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FD6B21398B305260A152648DC6DDD /* YYPassiveKeyPath.m */; };
+		969483570798D584D32CACC6477E9524 /* YYSameKeyPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9348CB2A6EF48474F95DFA0F316399 /* YYSameKeyPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96A62F838886C0E5584ED7E74278CD15 /* NSObject+YYPassiveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2816A6721F2F6C70DE8CA1913660B6 /* NSObject+YYPassiveObject.m */; };
+		AB067999A72A854D131D8227CB36F4AF /* YYObserverAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 95A5F6227F5B519299BCAF15ACDEA8D0 /* YYObserverAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B46461AB9DA0B27ECCBE22F2C5D2FE27 /* NSObject+YYDataFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = A81201CD56A7F7B6C5BA813815BF9FCE /* NSObject+YYDataFlow.m */; };
+		B973A7C1F1ED6A451346B78860DA88E3 /* YYObserverAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 459F79FFA2A8DC5D805B48C782DBBC46 /* YYObserverAgent.m */; };
 		C29CD4055EF85D9399DFD732B341EEEB /* Pods-YYDataFlow_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A74443FD5E9A20046687E477660F2830 /* Pods-YYDataFlow_Tests-dummy.m */; };
+		D90DA479F8ABC04E863E9C0F15FBFA3D /* YYPassiveKeyPath.h in Headers */ = {isa = PBXBuildFile; fileRef = B5DF9EAF2382B70F6767666902D1CEA2 /* YYPassiveKeyPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6E78E45D63F453CB14CA3BA0F98F1A0 /* YYDataFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29014B6D53C14182D58DE21DD209791F /* YYDataFlow-dummy.m */; };
+		E74B3C18F694A932E49511A64C5A58B3 /* NSObject+YYDataFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = 7332EC2F765259014A18612CF54A75AE /* NSObject+YYDataFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7D75E9F99338D082E067DBC746CF027 /* YYDataFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89E26EBEB3729D41EF0A411C138F3BE7 /* YYDataFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9E62C52638D126B60F0655CD03FB220 /* Pods-YYDataFlow_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F113E2E6A90CA74CFD478B77ECA16405 /* Pods-YYDataFlow_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -36,39 +40,43 @@
 
 /* Begin PBXFileReference section */
 		004B8C8722A0B01AAEA9293E3B7138D0 /* Pods-YYDataFlow_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYDataFlow_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0263C02EE1D96D6F86867C699B361CBF /* NSObject+YYDataFlow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYDataFlow.m"; path = "YYDataFlow/Classes/NSObject+YYDataFlow.m"; sourceTree = "<group>"; };
-		04844CB32D6FF2D519E2C2C6B40A3AA6 /* NSObject+SJObserverHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SJObserverHelper.m"; path = "YYDataFlow/Classes/NSObject+SJObserverHelper.m"; sourceTree = "<group>"; };
-		07292A48870031C8C3FE67550E2CD71F /* YYDataFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYDataFlow-dummy.m"; sourceTree = "<group>"; };
-		1F343565DC96D55E7E271DCFDDC55093 /* Pods-YYDataFlow_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YYDataFlow_Example.modulemap"; sourceTree = "<group>"; };
-		22CF8FCCEA045008E510AA15AA5F51C7 /* YYDataFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YYDataFlow.modulemap; sourceTree = "<group>"; };
+		04187C22B555338793BED5C013906254 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F343565DC96D55E7E271DCFDDC55093 /* Pods-YYDataFlow_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YYDataFlow_Example.modulemap"; sourceTree = "<group>"; };
 		238A333F7F3DB81FE1DBCE3A892BB346 /* Pods-YYDataFlow_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YYDataFlow_Tests-umbrella.h"; sourceTree = "<group>"; };
-		472365EDD9A792EC139621A5BA907F45 /* YYObserverAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYObserverAgent.h; path = YYDataFlow/Classes/YYObserverAgent.h; sourceTree = "<group>"; };
-		4835B205A1DBB8803D7D0887030D6B7A /* YYDataFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYDataFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29014B6D53C14182D58DE21DD209791F /* YYDataFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYDataFlow-dummy.m"; sourceTree = "<group>"; };
+		459F79FFA2A8DC5D805B48C782DBBC46 /* YYObserverAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYObserverAgent.m; path = YYDataFlow/Classes/YYObserverAgent.m; sourceTree = "<group>"; };
+		4835B205A1DBB8803D7D0887030D6B7A /* YYDataFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYDataFlow.framework; path = YYDataFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9348CB2A6EF48474F95DFA0F316399 /* YYSameKeyPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYSameKeyPath.h; path = YYDataFlow/Classes/YYSameKeyPath.h; sourceTree = "<group>"; };
+		5F2816A6721F2F6C70DE8CA1913660B6 /* NSObject+YYPassiveObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYPassiveObject.m"; path = "YYDataFlow/Classes/NSObject+YYPassiveObject.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6F6636278F222BC880717B28CEC3E06A /* YYDataFlow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYDataFlow-prefix.pch"; sourceTree = "<group>"; };
+		6DC6A86DF933D248CD93B527BF467432 /* YYDataFlow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYDataFlow.xcconfig; sourceTree = "<group>"; };
+		7332EC2F765259014A18612CF54A75AE /* NSObject+YYDataFlow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYDataFlow.h"; path = "YYDataFlow/Classes/NSObject+YYDataFlow.h"; sourceTree = "<group>"; };
 		85CBEAA40F5F1620973B184627DDE39F /* Pods-YYDataFlow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYDataFlow_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8A5D521CF30EAF801568A12E2C8CB9F9 /* Pods_YYDataFlow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYDataFlow_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DE3A555283165F51E4AF9DC80CBF2E8 /* Pods_YYDataFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYDataFlow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E26EBEB3729D41EF0A411C138F3BE7 /* YYDataFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYDataFlow-umbrella.h"; sourceTree = "<group>"; };
+		8A5D521CF30EAF801568A12E2C8CB9F9 /* Pods_YYDataFlow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YYDataFlow_Tests.framework; path = "Pods-YYDataFlow_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE3A555283165F51E4AF9DC80CBF2E8 /* Pods_YYDataFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YYDataFlow_Example.framework; path = "Pods-YYDataFlow_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		903C863899B9340A5CF68263DB61A46D /* Pods-YYDataFlow_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YYDataFlow_Example-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94038A8DD77B816E5C563DBF3068C42C /* Pods-YYDataFlow_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YYDataFlow_Tests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94038A8DD77B816E5C563DBF3068C42C /* Pods-YYDataFlow_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YYDataFlow_Tests.modulemap"; sourceTree = "<group>"; };
+		95A5F6227F5B519299BCAF15ACDEA8D0 /* YYObserverAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYObserverAgent.h; path = YYDataFlow/Classes/YYObserverAgent.h; sourceTree = "<group>"; };
 		9956BE97CE208E6A58293EF3D3A97D33 /* Pods-YYDataFlow_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YYDataFlow_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A27FD6B21398B305260A152648DC6DDD /* YYPassiveKeyPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYPassiveKeyPath.m; path = YYDataFlow/Classes/YYPassiveKeyPath.m; sourceTree = "<group>"; };
+		A4B4D05CB5A81DFE8635AE527FB94170 /* YYDataFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = YYDataFlow.modulemap; sourceTree = "<group>"; };
 		A74443FD5E9A20046687E477660F2830 /* Pods-YYDataFlow_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YYDataFlow_Tests-dummy.m"; sourceTree = "<group>"; };
-		A937C1E20849977F664B78FD8529DAC7 /* YYObserverAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYObserverAgent.m; path = YYDataFlow/Classes/YYObserverAgent.m; sourceTree = "<group>"; };
+		A81201CD56A7F7B6C5BA813815BF9FCE /* NSObject+YYDataFlow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYDataFlow.m"; path = "YYDataFlow/Classes/NSObject+YYDataFlow.m"; sourceTree = "<group>"; };
 		AB6F3FE252879FB45DB4FD45553C4FDE /* Pods-YYDataFlow_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YYDataFlow_Example-frameworks.sh"; sourceTree = "<group>"; };
 		ACB485BAE7D65975C870FDC08E56F6D6 /* Pods-YYDataFlow_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YYDataFlow_Tests-resources.sh"; sourceTree = "<group>"; };
 		B0CED0A58CA57B2FABAE3E3C4D002C66 /* Pods-YYDataFlow_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YYDataFlow_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B15EB8912E209D1F0DC883EFED77E101 /* NSObject+SJObserverHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SJObserverHelper.h"; path = "YYDataFlow/Classes/NSObject+SJObserverHelper.h"; sourceTree = "<group>"; };
+		B5DF9EAF2382B70F6767666902D1CEA2 /* YYPassiveKeyPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYPassiveKeyPath.h; path = YYDataFlow/Classes/YYPassiveKeyPath.h; sourceTree = "<group>"; };
 		BA119FA597FA81CD5438166B8C4C84C2 /* Pods-YYDataFlow_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YYDataFlow_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C2696C04132272E40F3E1CDB3393468E /* Pods-YYDataFlow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYDataFlow_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C5B6064F29CCDEFB196212F21105EB10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9A1883F2D3ED4FCFDEC3B6F20F0A4D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C912B74F243D2DD1F853333D6E599F67 /* YYDataFlow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYDataFlow-prefix.pch"; sourceTree = "<group>"; };
+		CBEAD2080A9E4ACA2AE185957DE8E9F1 /* YYSameKeyPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYSameKeyPath.m; path = YYDataFlow/Classes/YYSameKeyPath.m; sourceTree = "<group>"; };
 		D220E0617815EAEF85038D64F0CA3B89 /* Pods-YYDataFlow_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YYDataFlow_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		D590E89D4CEDF9DB5AC48EB7DEE01344 /* Pods-YYDataFlow_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYDataFlow_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DC74B9EB9C992F3A6051FD58D798F7F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E16B0BAF7DBA2851A18E9FF729F4D520 /* NSObject+YYDataFlow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYDataFlow.h"; path = "YYDataFlow/Classes/NSObject+YYDataFlow.h"; sourceTree = "<group>"; };
-		E392DF0AD4304F5EF12B2EE3DCC7FD77 /* YYDataFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYDataFlow-umbrella.h"; sourceTree = "<group>"; };
-		EFEF371A6E274C3B0A22F01E5727FA4B /* YYDataFlow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYDataFlow.xcconfig; sourceTree = "<group>"; };
+		E9705648165C004232A43D7FD8D7581D /* NSObject+YYPassiveObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYPassiveObject.h"; path = "YYDataFlow/Classes/NSObject+YYPassiveObject.h"; sourceTree = "<group>"; };
 		F113E2E6A90CA74CFD478B77ECA16405 /* Pods-YYDataFlow_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YYDataFlow_Example-dummy.m"; sourceTree = "<group>"; };
 		F543876B72EE0BA303E22BB7D35BA074 /* Pods-YYDataFlow_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YYDataFlow_Example-resources.sh"; sourceTree = "<group>"; };
 		FA759655D2CD5F966C459DED0F8FA2A7 /* Pods-YYDataFlow_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YYDataFlow_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -102,14 +110,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E95AE2DC2A3C13CC995C5A1CF74C86A /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				32E768B43AFF1F94397082E87E87DB3A /* YYDataFlow */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		1F38684FBD2EF2E816B0AB051E67130E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,30 +119,34 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		32E768B43AFF1F94397082E87E87DB3A /* YYDataFlow */ = {
+		233F51DB3AD98504B5171E4F08661DE9 /* YYDataFlow */ = {
 			isa = PBXGroup;
 			children = (
-				B15EB8912E209D1F0DC883EFED77E101 /* NSObject+SJObserverHelper.h */,
-				04844CB32D6FF2D519E2C2C6B40A3AA6 /* NSObject+SJObserverHelper.m */,
-				E16B0BAF7DBA2851A18E9FF729F4D520 /* NSObject+YYDataFlow.h */,
-				0263C02EE1D96D6F86867C699B361CBF /* NSObject+YYDataFlow.m */,
-				472365EDD9A792EC139621A5BA907F45 /* YYObserverAgent.h */,
-				A937C1E20849977F664B78FD8529DAC7 /* YYObserverAgent.m */,
-				3BCD772B3A75FBE7B1CE925CA83E22DE /* Support Files */,
+				7332EC2F765259014A18612CF54A75AE /* NSObject+YYDataFlow.h */,
+				A81201CD56A7F7B6C5BA813815BF9FCE /* NSObject+YYDataFlow.m */,
+				E9705648165C004232A43D7FD8D7581D /* NSObject+YYPassiveObject.h */,
+				5F2816A6721F2F6C70DE8CA1913660B6 /* NSObject+YYPassiveObject.m */,
+				95A5F6227F5B519299BCAF15ACDEA8D0 /* YYObserverAgent.h */,
+				459F79FFA2A8DC5D805B48C782DBBC46 /* YYObserverAgent.m */,
+				B5DF9EAF2382B70F6767666902D1CEA2 /* YYPassiveKeyPath.h */,
+				A27FD6B21398B305260A152648DC6DDD /* YYPassiveKeyPath.m */,
+				4F9348CB2A6EF48474F95DFA0F316399 /* YYSameKeyPath.h */,
+				CBEAD2080A9E4ACA2AE185957DE8E9F1 /* YYSameKeyPath.m */,
+				274F1BC21201D5B1F97AB99F3EB3F5E9 /* Support Files */,
 			);
 			name = YYDataFlow;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		3BCD772B3A75FBE7B1CE925CA83E22DE /* Support Files */ = {
+		274F1BC21201D5B1F97AB99F3EB3F5E9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C9A1883F2D3ED4FCFDEC3B6F20F0A4D9 /* Info.plist */,
-				22CF8FCCEA045008E510AA15AA5F51C7 /* YYDataFlow.modulemap */,
-				EFEF371A6E274C3B0A22F01E5727FA4B /* YYDataFlow.xcconfig */,
-				07292A48870031C8C3FE67550E2CD71F /* YYDataFlow-dummy.m */,
-				6F6636278F222BC880717B28CEC3E06A /* YYDataFlow-prefix.pch */,
-				E392DF0AD4304F5EF12B2EE3DCC7FD77 /* YYDataFlow-umbrella.h */,
+				04187C22B555338793BED5C013906254 /* Info.plist */,
+				A4B4D05CB5A81DFE8635AE527FB94170 /* YYDataFlow.modulemap */,
+				6DC6A86DF933D248CD93B527BF467432 /* YYDataFlow.xcconfig */,
+				29014B6D53C14182D58DE21DD209791F /* YYDataFlow-dummy.m */,
+				C912B74F243D2DD1F853333D6E599F67 /* YYDataFlow-prefix.pch */,
+				89E26EBEB3729D41EF0A411C138F3BE7 /* YYDataFlow-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/YYDataFlow";
@@ -170,11 +174,19 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				1E95AE2DC2A3C13CC995C5A1CF74C86A /* Development Pods */,
+				A6DBBEEB30C70247E0AC98EE985E1F43 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				D6562CBD6A343D076A800F1380C39666 /* Products */,
 				1F38684FBD2EF2E816B0AB051E67130E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A6DBBEEB30C70247E0AC98EE985E1F43 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				233F51DB3AD98504B5171E4F08661DE9 /* YYDataFlow */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -232,22 +244,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F15956001643ABA6383E2D19FEF5C78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E74B3C18F694A932E49511A64C5A58B3 /* NSObject+YYDataFlow.h in Headers */,
+				58D4AC9BE5FB5B50CCCD6E303BEACCB4 /* NSObject+YYPassiveObject.h in Headers */,
+				E7D75E9F99338D082E067DBC746CF027 /* YYDataFlow-umbrella.h in Headers */,
+				AB067999A72A854D131D8227CB36F4AF /* YYObserverAgent.h in Headers */,
+				D90DA479F8ABC04E863E9C0F15FBFA3D /* YYPassiveKeyPath.h in Headers */,
+				969483570798D584D32CACC6477E9524 /* YYSameKeyPath.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9EEEE58FB40FC248A862F35B68DCA0F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				36D4131AB879CB3422798C10F29A63C3 /* Pods-YYDataFlow_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C358CD8E7E8EC970A3ED6D276AE5AA43 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7579AA9F979AD7D245E389EA35BC1CEC /* NSObject+SJObserverHelper.h in Headers */,
-				429959534F0F6F1D4F36A83E8AF5DBD4 /* NSObject+YYDataFlow.h in Headers */,
-				9757359E79A2DB76FFF843DBA1E818FB /* YYDataFlow-umbrella.h in Headers */,
-				149551E1A46373E36D5FFEC213146CFB /* YYObserverAgent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +307,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFB51D0C377447894FC6A144EFB84301 /* Build configuration list for PBXNativeTarget "YYDataFlow" */;
 			buildPhases = (
-				2A3F51B13E1470BE20DEB2FEE8B00175 /* Sources */,
+				60293C280BBBF43E5235EB21530E0D64 /* Sources */,
 				C62766DC93A9C4CB39BE6B2D981C09F9 /* Frameworks */,
-				C358CD8E7E8EC970A3ED6D276AE5AA43 /* Headers */,
+				6F15956001643ABA6383E2D19FEF5C78 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -343,14 +357,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A3F51B13E1470BE20DEB2FEE8B00175 /* Sources */ = {
+		60293C280BBBF43E5235EB21530E0D64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291D94CBCD2100ED47B728328A51801A /* NSObject+SJObserverHelper.m in Sources */,
-				A1703E3CB458EC324FA31849CDD81531 /* NSObject+YYDataFlow.m in Sources */,
-				29EF34949843F47D8C2F1F9277FB4878 /* YYDataFlow-dummy.m in Sources */,
-				0C2E97A4C73B92175996051CEB89D6DB /* YYObserverAgent.m in Sources */,
+				B46461AB9DA0B27ECCBE22F2C5D2FE27 /* NSObject+YYDataFlow.m in Sources */,
+				96A62F838886C0E5584ED7E74278CD15 /* NSObject+YYPassiveObject.m in Sources */,
+				E6E78E45D63F453CB14CA3BA0F98F1A0 /* YYDataFlow-dummy.m in Sources */,
+				B973A7C1F1ED6A451346B78860DA88E3 /* YYObserverAgent.m in Sources */,
+				92B80C3CC31B5A6A033E26395292F5BD /* YYPassiveKeyPath.m in Sources */,
+				724724628851EDC241FABBA8856B4DD7 /* YYSameKeyPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +472,7 @@
 		};
 		215A0D98165C8F3D5BB9FACD20603A77 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFEF371A6E274C3B0A22F01E5727FA4B /* YYDataFlow.xcconfig */;
+			baseConfigurationReference = 6DC6A86DF933D248CD93B527BF467432 /* YYDataFlow.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -597,7 +613,7 @@
 		};
 		B217A8B7B1A0CE50FC2F9E4C5173AAEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFEF371A6E274C3B0A22F01E5727FA4B /* YYDataFlow.xcconfig */;
+			baseConfigurationReference = 6DC6A86DF933D248CD93B527BF467432 /* YYDataFlow.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

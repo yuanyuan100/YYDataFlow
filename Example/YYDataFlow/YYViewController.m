@@ -7,11 +7,14 @@
 //
 
 #import "YYViewController.h"
-#import <YYDataFlow/NSObject+YYDataFlow.h>
-#import "Person.h"
 
-@interface YYViewController ()
-@property (nonatomic, strong) Person *person;
+#import "YYDetailViewController.h"
+
+
+static NSArray * titleArray;
+
+@interface YYViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation YYViewController
@@ -20,38 +23,34 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    Person *person = [Person new];
-    self.person = person;
-    person.name = @"pyy1";
-    YYDataFlowChanged a = ^(id  _Nonnull newData, id  _Nonnull oldData) {
-        
-    };
-    [person yyObserveredKeyPath:@"name" changed:a];
     
-    YYDataFlowChanged b = ^(id  _Nonnull newData, id  _Nonnull oldData) {
-        
-    };
-    [person yyObserveredKeyPath:@"name" changed:b];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        person.name = @"pyy2";
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [person yyRemoveObserveredKeyPath:@"name" changed:a];
-            [person yyRemoveObserveredKeyPath:@"name" changed:b];
-            
-            person.name = @"pyy3";
-            
-            [self performSelector:@selector(personToNil) withObject:nil afterDelay:3];
-            
-        });
-    });
-    
+    titleArray = @[@"UITableView"];
+
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
     
 }
 
-- (void)personToNil {
-    self.person = nil;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return titleArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = titleArray[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YYDetailViewController *vc = [YYDetailViewController new];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
