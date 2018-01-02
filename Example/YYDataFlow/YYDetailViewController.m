@@ -92,6 +92,7 @@ static CGFloat t;
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"cell__"];
     }
+    
     cell.textLabel.text = [self.dataSource[indexPath.row] name];
     [cell.textLabel yyPassiveKeyPath:@"text" adjectiveObject:self.dataSource[indexPath.row] adjectiveKeyPath:@"name"];
     

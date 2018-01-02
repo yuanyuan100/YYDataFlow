@@ -5,11 +5,25 @@
 [![License](https://img.shields.io/cocoapods/l/YYDataFlow.svg?style=flat)](http://cocoapods.org/pods/YYDataFlow)
 [![Platform](https://img.shields.io/cocoapods/p/YYDataFlow.svg?style=flat)](http://cocoapods.org/pods/YYDataFlow)
 
+## introduce
+
+正在开发的App为金融类型，后台频繁快速推送数据，UI界面需要及时响应。为了解决频繁reload UITableView等空间，解决办法是某个数据发生变化，仅刷新相应的独立UI元素（如，UILable，UIButton）。
+
+利用单例作为观察者，所以大大简化了代码。利用对象必须先释放属性的特性，解决了频繁移除观察者的代码量，可以自动释放观察者。
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```objc
+cell.textLabel.text = [self.dataSource[indexPath.row] name];
+[cell.textLabel yyPassiveKeyPath:@"text" adjectiveObject:self.dataSource[indexPath.row] adjectiveKeyPath:@"name"];
+```
 ## Requirements
+
+```ruby
+s.ios.deployment_target = '8.0'
+```
 
 ## Installation
 
