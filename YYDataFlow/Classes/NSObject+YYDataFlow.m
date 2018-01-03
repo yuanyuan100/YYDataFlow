@@ -26,13 +26,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 核心方法
 - (void)yyObserveredKeyPath:(NSString *)keyPath changed:(nonnull YYDataFlowChanged)changed {
-   // 此处处理不同的keyPath
-    for (YYSameKeyPath *same in self.yyKeyPathSet) {
-        if ([same.keyPath isEqualToString:keyPath]) {
-            [self yyObserveredSameKeyPathOobject:same changed:changed];
-            return;
-        }
+    // 此处处理不同的keyPath
+    // 匹配性能优化
+    YYSameKeyPath *same = [self.yyKeyPathSet member:(YYSameKeyPath *)keyPath];
+    if (same) {
+        [self yyObserveredSameKeyPathOobject:same changed:changed];
+        return;
     }
+    
+//   // 此处处理不同的keyPath
+//    for (YYSameKeyPath *same in self.yyKeyPathSet) {
+//        if ([same.keyPath isEqualToString:keyPath]) {
+//            [self yyObserveredSameKeyPathOobject:same changed:changed];
+//            return;
+//        }
+//    }
     
     // 新增
     YYSameKeyPath *skp = [YYSameKeyPath new];
@@ -57,11 +65,19 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)yyRemoveObserveredKeyPath:(NSString *)keyPath changed:(nonnull YYDataFlowChanged)changed {
-    for (YYSameKeyPath *same in self.yyKeyPathSet) {
-        if ([same.keyPath isEqualToString:keyPath]) {
-            [self yyRemoveObserveredSameKeyPathObject:same changed:changed];
-        }
+    
+    // 此处处理不同的keyPath
+    // 匹配性能优化
+    YYSameKeyPath *same = [self.yyKeyPathSet member:(YYSameKeyPath *)keyPath];
+    if (same) {
+        [self yyRemoveObserveredSameKeyPathObject:same changed:changed];
     }
+    
+//    for (YYSameKeyPath *same in self.yyKeyPathSet) {
+//        if ([same.keyPath isEqualToString:keyPath]) {
+//            [self yyRemoveObserveredSameKeyPathObject:same changed:changed];
+//        }
+//    }
 }
 
 - (void)yyRemoveObserveredSameKeyPathObject:(YYSameKeyPath *)object changed:(nonnull YYDataFlowChanged)changed {

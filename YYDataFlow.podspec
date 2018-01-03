@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YYDataFlow'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '去中心化的KVO，数据驱动'
 
 # This description is used to generate tags and improve search results.

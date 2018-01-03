@@ -15,6 +15,11 @@
 static void * kYYPassiveObjectyyPassiveKeyPathArray = &kYYPassiveObjectyyPassiveKeyPathArray;
 
 @interface NSObject ()
+/**
+ 涉及 block 回调顺序，且元素不会太多，故使用数组而不用集合
+
+ author pyy
+ */
 @property (nonatomic, strong) NSMutableArray *yyPassiveKeyPathArray;
 @end
 

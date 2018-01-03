@@ -29,4 +29,21 @@
     }
     return _callBlockArray;
 }
+
+- (NSUInteger)hash {
+    return [_keyPath hash];
+}
+- (BOOL)isEqual:(id)object {
+    BOOL ret = [super isEqual:object];
+    
+    if (ret) {
+        return YES;
+    } else {
+        if ([_keyPath isEqualToString:object]) {
+            return  YES;
+        }
+    }
+    
+    return NO;
+}
 @end

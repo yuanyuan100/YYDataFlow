@@ -34,6 +34,10 @@ it, simply add the following line to your Podfile:
 pod 'YYDataFlow'
 ```
 
+## Update
+
+0.0.2:更新了集合的匹配方法，优化查找效率。2018年01月03日10:51:26
+
 ## Author
 
 Yvan, yuanyuan_pyy@163.com
